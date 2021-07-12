@@ -1,35 +1,91 @@
 <template>
-  <h1>慕课乐高标准模版</h1>
-  <a-button type="primary">Primary</a-button>
-  <hello msg="hello world" />
-  <ul>
-    <li>开箱即用</li>
-    <li>typescript</li>
-    <li>Vue3</li>
-    <li>支持 tsx</li>
-    <li>eslint</li>
-    <li>简单易用可扩展</li>
-  </ul>
+  <home />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import Hello from './components/Hello'
+import Home from './views/Home.vue'
+// import Editor from './views/Editor.vue'
 export default defineComponent({
   name: 'App',
   components: {
-    Hello
+    Home
   }
 })
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.transparent-header {
+  background-color: rgba(0, 0, 0, .5);
+}
+.ant-layout-header {
+  z-index: 50;
+  box-shadow: 0 10px 15px rgb(0, 0, 0 / 10%);
+}
+.header {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .logo-img {
+  height: 35px;
+}
+.right-col {
+  margin-left: 30px;
+}
+.banner {
+  display: flex;
+  position: relative;
+  height: 450px;
+  width: 100%;
+  overflow: hidden;
+}
+.banner img {
+  object-fit: cover;
+}
+.banner-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.text-headline {
+  text-shadow: 0 0 1px rgb(68, 92, 116 / 2%);
+  font-size: 2em;
+  color: #fff;
+}
+.banner-text .ant-input-search {
+  width: 40%;
+  box-shadow: 0 12px 24px 0 rgb(30 29 32 / 80%);
+  border-radius: 20px;
+}
+.banner-text .ant-input {
+  height: 40px;
+  font-size: 17px;
+  padding: 7px 15px;
+  padding-right: 30px;
+  border: 2px solid #1890ff;
+  border-right-width: 0;
+  border-radius: 20px;
+}
+.banner-text .ant-input-group-addon {
+  border-radius: 20px;
+}
+.banner-text .ant-input-search-button {
+  height: 40px;
+  border: 2px solid #1890ff;
+  border-left-width: 0;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+.banner-text .ant-input-search-button svg {
+  font-size: 25px;
 }
 </style>
