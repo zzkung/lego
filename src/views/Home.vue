@@ -36,8 +36,9 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import TemplateList from '@/components/TemplateList.vue'
-export default {
+export default defineComponent({
   name: 'home',
   components: {
     TemplateList
@@ -111,7 +112,7 @@ export default {
       console.log(value, event)
     }
   }
-}
+})
 
 </script>
 

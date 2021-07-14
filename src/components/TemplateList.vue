@@ -76,7 +76,7 @@ export default defineComponent({
   top: 0;
   width: 100%;
   height: 100%;
-  display: none;
+  display: none!important;
   background: rgba(0,0,0,.8);
   align-items: center;
   justify-content: center;
@@ -84,7 +84,7 @@ export default defineComponent({
   border-top-right-radius: 12px;
 }
 .poster-item:hover .hover-item {
-	display: flex;
+	display: flex!important;
 }
 .poster-item:hover img {
 	transform: scale(1.25);

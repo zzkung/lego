@@ -1,15 +1,20 @@
 <template>
-  <home />
+  <!-- <home /> -->
+  <editor />
+  <!-- <template-detail /> -->
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 import Home from './views/Home.vue'
-// import Editor from './views/Editor.vue'
+import TemplateDetail from './views/TemplateDetail.vue'
+import Editor from './views/Editor.vue'
 export default defineComponent({
   name: 'App',
   components: {
-    Home
+    // Home,
+    Editor,
+    // TemplateDetail
   }
 })
 </script>
@@ -19,17 +24,17 @@ export default defineComponent({
   background-color: rgba(0, 0, 0, .5);
 }
 .ant-layout-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   z-index: 50;
   box-shadow: 0 10px 15px rgb(0, 0, 0 / 10%);
 }
 .header {
   position: fixed;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
-.header .logo-img {
+.logo-img {
   height: 35px;
 }
 .right-col {
